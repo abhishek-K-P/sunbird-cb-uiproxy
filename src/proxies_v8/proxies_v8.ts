@@ -32,6 +32,7 @@ import { contentTranscodeAPIIntegration } from './contentTranscodeAPIIntegration
 import { frameworksApi } from './frameworks'
 import { jwtUserTokenHelper } from './jwtUserTokenHelper'
 import { lookerDashboard } from './lookerIntegration'
+import { chatBotTranscoderAPIIntegration } from './chatBotTranscoderAPIIntegration'
 
 const API_END_POINTS = {
   batchParticipantsApi: `${CONSTANTS.KONG_API_BASE}/course/v1/batch/participants/list`,

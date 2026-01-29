@@ -21,15 +21,15 @@ chatBotTranscoderAPIIntegration.use('/*', async (req: express.Request, res: expr
         if (requestHeaders['accept-encoding']) {
             requestHeaders['accept-encoding'] = (requestHeaders['accept-encoding'] as string)
                 .split(',')
-                .map(enc => enc.trim())
-                .filter(enc => enc !== 'br')
+                .map((enc) => enc.trim())
+                .filter((enc) => enc !== 'br')
                 .join(', ')
         }
         if (requestHeaders['content-encoding']) {
             requestHeaders['content-encoding'] = (requestHeaders['content-encoding'] as string)
                 .split(',')
-                .map(enc => enc.trim())
-                .filter(enc => enc !== 'br')
+                .map((enc) => enc.trim())
+                .filter((enc) => enc !== 'br')
                 .join(', ')
         }
 
@@ -59,20 +59,20 @@ chatBotTranscoderAPIIntegration.use('/*', async (req: express.Request, res: expr
         if (responseHeaders['content-encoding']) {
             responseHeaders['content-encoding'] = (responseHeaders['content-encoding'] as string)
                 .split(',')
-                .map(enc => enc.trim())
-                .filter(enc => enc !== 'br')
+                .map((enc) => enc.trim())
+                .filter((enc) => enc !== 'br')
                 .join(', ')
         }
         if (responseHeaders['accept-encoding']) {
             responseHeaders['accept-encoding'] = (responseHeaders['accept-encoding'] as string)
                 .split(',')
-                .map(enc => enc.trim())
-                .filter(enc => enc !== 'br')
+                .map((enc) => enc.trim())
+                .filter((enc) => enc !== 'br')
                 .join(', ')
         }
 
         // Set filtered headers to response
-        Object.keys(responseHeaders).forEach(key => {
+        Object.keys(responseHeaders).forEach((key) => {
             if (responseHeaders[key]) {
                 res.setHeader(key, responseHeaders[key])
             }
