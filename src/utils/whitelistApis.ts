@@ -7774,6 +7774,6 @@ export const API_LIST = {
             '/proxies/v8/contentpartner/register/v1/search',
             '/proxies/v8/learningpathway/v1/enrol/:id',
             '/proxies/v8/contentpartner/register/v1/readbyid',
-            '/public/v8/chatbot/v3/mobile/transcoder/stats'
+            '/public/v8/chatbot/v3/mobile/transcoder/stats',
             ],
 }
