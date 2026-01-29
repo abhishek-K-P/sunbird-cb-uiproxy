@@ -28,7 +28,6 @@ import {
 import { extractUserIdFromRequest, extractUserToken } from '../utils/requestExtract'
 import { chatBotGenericAPIIntegration } from './chatBotGenericAPIIntegration'
 import { chatBotIntegrationAPI } from './chatBotIntegration'
-import { chatBotTranscoderAPIIntegration } from './chatBotTranscoderAPIIntegration'
 import { contentTranscodeAPIIntegration } from './contentTranscodeAPIIntegration'
 import { frameworksApi } from './frameworks'
 import { jwtUserTokenHelper } from './jwtUserTokenHelper'
@@ -1265,8 +1264,6 @@ proxiesV8.use('/courseRecommendation/*',
 )
 
 proxiesV8.use('/chatbot/v3/global', chatBotGenericAPIIntegration)
-
-proxiesV8.use('/chatbot/v3/transcoder', chatBotTranscoderAPIIntegration)
 
 proxiesV8.use('/chatbot/v3', chatBotIntegrationAPI)
 
