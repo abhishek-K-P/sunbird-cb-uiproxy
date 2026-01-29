@@ -4,6 +4,9 @@ import { axiosRequestConfig } from '../configs/request.config'
 import { CONSTANTS } from '../utils/env'
 import { logError, logInfo } from '../utils/logger'
 
+const ACCEPT_ENCODING = 'accept-encoding'
+const CONTENT_ENCODING = 'content-encoding'
+
 export const chatBotTranscoderAPIIntegration = express.Router()
 
 chatBotTranscoderAPIIntegration.use('/*', async (req: express.Request, res: express.Response) => {
@@ -18,15 +21,15 @@ chatBotTranscoderAPIIntegration.use('/*', async (req: express.Request, res: expr
 
         // Remove 'br' from request headers
         const requestHeaders = { ...req.headers }
-        if (requestHeaders['accept-encoding']) {
-            requestHeaders['accept-encoding'] = (requestHeaders['accept-encoding'] as string)
+        if (requestHeaders[ACCEPT_ENCODING]) {
+            requestHeaders[ACCEPT_ENCODING] = String(requestHeaders[ACCEPT_ENCODING])
                 .split(',')
                 .map((enc) => enc.trim())
                 .filter((enc) => enc !== 'br')
                 .join(', ')
         }
-        if (requestHeaders['content-encoding']) {
-            requestHeaders['content-encoding'] = (requestHeaders['content-encoding'] as string)
+        if (requestHeaders[CONTENT_ENCODING]) {
+            requestHeaders[CONTENT_ENCODING] = String(requestHeaders[CONTENT_ENCODING])
                 .split(',')
                 .map((enc) => enc.trim())
                 .filter((enc) => enc !== 'br')
@@ -56,15 +59,15 @@ chatBotTranscoderAPIIntegration.use('/*', async (req: express.Request, res: expr
 
         // Remove 'br' from response headers
         const responseHeaders = { ...response.headers }
-        if (responseHeaders['content-encoding']) {
-            responseHeaders['content-encoding'] = (responseHeaders['content-encoding'] as string)
+        if (responseHeaders[CONTENT_ENCODING]) {
+            responseHeaders[CONTENT_ENCODING] = String(responseHeaders[CONTENT_ENCODING])
                 .split(',')
                 .map((enc) => enc.trim())
                 .filter((enc) => enc !== 'br')
                 .join(', ')
         }
-        if (responseHeaders['accept-encoding']) {
-            responseHeaders['accept-encoding'] = (responseHeaders['accept-encoding'] as string)
+        if (responseHeaders[ACCEPT_ENCODING]) {
+            responseHeaders[ACCEPT_ENCODING] = String(responseHeaders[ACCEPT_ENCODING])
                 .split(',')
                 .map((enc) => enc.trim())
                 .filter((enc) => enc !== 'br')
