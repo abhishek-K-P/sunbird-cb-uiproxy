@@ -1265,6 +1265,8 @@ proxiesV8.use('/courseRecommendation/*',
 
 proxiesV8.use('/chatbot/v3/global', chatBotGenericAPIIntegration)
 
+proxiesV8.use('/chatbot/v3/transcoder', chatBotTranscoderAPIIntegration)
+
 proxiesV8.use('/chatbot/v3', chatBotIntegrationAPI)
 
 proxiesV8.use('/chatbot/*',
