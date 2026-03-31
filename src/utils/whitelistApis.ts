@@ -7069,7 +7069,42 @@ export const API_LIST = {
                 ROLE.SPV_ADMIN,
             ],
         },
-
+        '/proxies/v8/content/v2/read/:do_id': {
+            checksNeeded: [CHECK.ROLE],
+            // tslint:disable-next-line: object-literal-sort-keys
+            ROLE_CHECK: [
+                ROLE.PUBLIC,
+                ROLE.MDO_ADMIN,
+                ROLE.MDO_LEADER,
+                ROLE.SPV_ADMIN,
+                ROLE.SPV_PUBLISHER,
+                ROLE.CONTENT_CREATOR,
+                ROLE.CONTENT_REVIEWER,
+                ROLE.CONTENT_PUBLISHER,
+                ROLE.PROGRAM_COORDINATOR,
+                ROLE.PROGRAM_INSTRUCTOR,
+                ROLE.STATE_ADMIN,
+                ROLE.CBP_ADMIN,
+            ],
+        },
+        '/proxies/v8/course/v1/hierarchy/:do_id': {
+            checksNeeded: [CHECK.ROLE],
+            // tslint:disable-next-line: object-literal-sort-keys
+            ROLE_CHECK: [
+                ROLE.PUBLIC,
+                ROLE.MDO_ADMIN,
+                ROLE.MDO_LEADER,
+                ROLE.SPV_ADMIN,
+                ROLE.SPV_PUBLISHER,
+                ROLE.CONTENT_CREATOR,
+                ROLE.CONTENT_REVIEWER,
+                ROLE.CONTENT_PUBLISHER,
+                ROLE.PROGRAM_COORDINATOR,
+                ROLE.PROGRAM_INSTRUCTOR,
+                ROLE.STATE_ADMIN,
+                ROLE.CBP_ADMIN,
+            ],
+        },
     },
     URL_PATTERN:
         [
@@ -7968,5 +8003,7 @@ export const API_LIST = {
             '/proxies/v8/knowledge/centre/publish/:type',
             '/proxies/v8/knowledge/centre/delete/:type/:id',
             '/proxies/v8/knowledge/centre/spv/search',
+            '/proxies/v8/content/v2/read/:do_id',
+            '/proxies/v8/course/v1/hierarchy/:do_id',
         ],
 }
