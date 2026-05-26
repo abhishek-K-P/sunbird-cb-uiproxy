@@ -43,8 +43,8 @@ module.exports = {
         },
     },
     logLevel: 'error',
-    pluginBasePath: __dirname + '/../node_modules/',
-    plugins: [
+    pluginBasePath: process.cwd() + '/node_modules/',
+    plugins: CONSTANTS.IS_DEVELOPMENT ? [] : [
         { id: '@project-sunbird/form-service', ver: '1.0'},
         // { id: '@project-sunbird/review-comment', ver: '1.0' },
         // { id: '@project-sunbird/discussion-service', ver: '1.0' }
