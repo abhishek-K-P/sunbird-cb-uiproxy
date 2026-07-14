@@ -7724,57 +7724,6 @@ export const API_LIST = {
                 ROLE.SPV_ADMIN,
             ],
         },
-        '/proxies/v8/learner/course/v4/user/ngo/enrollment/details': {
-            checksNeeded: [CHECK.ROLE],
-            // tslint:disable-next-line: object-literal-sort-keys
-            ROLE_CHECK: [
-                ROLE.VOLUNTEER,
-            ],
-        },
-        '/proxies/v8/bp/v2/bpreport/list': {
-            checksNeeded: [CHECK.ROLE],
-            // tslint:disable-next-line: object-literal-sort-keys
-            ROLE_CHECK: [
-                ROLE.MDO_ADMIN,
-                ROLE.MDO_LEADER,
-                ROLE.PROGRAM_COORDINATOR,
-            ],
-        },
-        '/proxies/v8/learner/course/v4/user/ngo/enrollment/list': {
-            checksNeeded: [CHECK.ROLE],
-            // tslint:disable-next-line: object-literal-sort-keys
-            ROLE_CHECK: [
-                ROLE.VOLUNTEER,
-            ],
-        },
-        '/proxies/v8/ai/chatbot/v1/sessions/create': {
-            checksNeeded: [CHECK.ROLE],
-            // tslint:disable-next-line: object-literal-sort-keys
-            ROLE_CHECK: [
-                ROLE.PUBLIC,
-            ],
-        },
-        '/proxies/v8/ai/chatbot/v1/sessions/list': {
-            checksNeeded: [CHECK.ROLE],
-            // tslint:disable-next-line: object-literal-sort-keys
-            ROLE_CHECK: [
-                ROLE.PUBLIC,
-            ],
-        },
-        '/proxies/v8/ai/chatbot/v1/sessions/history/:id': {
-            checksNeeded: [CHECK.ROLE],
-            // tslint:disable-next-line: object-literal-sort-keys
-            ROLE_CHECK: [
-                ROLE.PUBLIC,
-            ],
-        },
-        '/proxies/v8/ai/chatbot/v1/sessions/turn/:id': {
-            checksNeeded: [CHECK.ROLE],
-            // tslint:disable-next-line: object-literal-sort-keys
-            ROLE_CHECK: [
-                ROLE.PUBLIC,
-            ],
-        },
         '/proxies/v8/formsConfig/v1/create': {
             checksNeeded: [CHECK.ROLE],
             // tslint:disable-next-line: object-literal-sort-keys
@@ -7876,13 +7825,6 @@ export const API_LIST = {
           ROLE_CHECK: [
             ROLE.PUBLIC,
           ],
-        },
-        '/proxies/v8/org/v1/status/update': {
-            checksNeeded: [CHECK.ROLE],
-            // tslint:disable-next-line: object-literal-sort-keys
-            ROLE_CHECK: [
-                ROLE.SPV_ADMIN,
-            ],
         },
         '/proxies/v8/course/v2/unenroll': {
             checksNeeded: [CHECK.ROLE],
@@ -8896,7 +8838,6 @@ export const API_LIST = {
             '/proxies/v8/formsConfig/v1/create',
             '/proxies/v8/formsConfig/v1/read',
             '/proxies/v8/formsConfig/v1/update',
-            '/proxies/v8/org/v1/status/update',
             '/proxies/v8/course/v2/unenroll',
             '/proxies/v8/course/v1/reenroll',
             '/proxies/v8/user/profile/v2/basic',
